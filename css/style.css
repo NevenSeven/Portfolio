@@ -292,6 +292,45 @@ section{
     border: 5px solid var(--main-color);
     transform: scale(1.03);
 }
+.services .ai{
+    background-image: url(../images/ai.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center 40%;
+    height: 590px;
+    border-radius: 3rem;
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s, border 0.4s;
+}
+.services .ai::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    mask-image: radial-gradient(circle at 60% 40%, white 60%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle at 60% 40%, white 60%, transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+    transition: backdrop-filter 0.4s, -webkit-backdrop-filter 0.4s;
+}
+.services .ai > * {
+    position: relative;
+    z-index: 2;
+}
+
+.services .ai:hover {
+    color: var(--main-color);
+    border: 5px solid var(--main-color);
+    transform: scale(1.03);
+}
+.services .ai:hover::before {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
 .service-info{
     display: flex;
     flex-direction: column;
